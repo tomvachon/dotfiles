@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/Users/vachon/.irssi'
+let g:netrw_dirhist_2='/Users/vachon/repos/sysadmin'
+let g:netrw_dirhist_3='/Users/vachon/repos/sysadmin/deploy/config/deploy/apps/core/deploy'
+let g:netrw_dirhist_4='/Users/vachon/tmp/helloworld/grails-app/controllers/helloworld'
+let g:netrw_dirhist_5='/Users/vachon/repos/sysadmin/puppet/modules/nginx/manifests'
+let g:netrw_dirhist_6='/Users/vachon/repos/rt-reporting/graphene/graphene/app/js'
+let g:netrw_dirhist_7='/Users/vachon/.vim/autoload'

@@ -1,0 +1,42 @@
+escape ^Oo
+ 
+#Don't display the copyright page
+startup_message off
+
+# tab-completion flash in heading bar
+vbell off
+
+# keep scrollback 30000 lines
+defscrollback 30000
+
+#Disable full screen apps (e.g. vim) from killing your scrollback
+altscreen
+
+screen -t IAD-admin 0 bash
+screen -t IAD-root 1 bash
+screen -t EWR-admin 1 bash
+screen -t EWR-root 1 bash
+screen -t sysadmin 1 bash
+screen -t local 1 bash
+
+shelltitle "$ |bash"
+
+#setup logging
+hardcopy_append on
+hardcopydir $HOME/screenlogs
+
+# Enable 256 color term
+term xterm-256color
+
+# Hide hardstatus: ctrl-a f 
+bind f eval "hardstatus ignore"
+# Show hardstatus: ctrl-a F
+bind F eval "hardstatus alwayslastline"
+
+# THIS IS THE PRETTY BIT
+#change the hardstatus settings to give an window list at the bottom of the                                                                        
+##screen, with the time and date and with the current window highlighted                                                                            
+hardstatus             alwayslastline                                                                                                                          
+hardstatus alwayslastline
+hardstatus string '%{= kw}[ %{= kb}%H%{= kw} ][%= %{= kw}%?%-Lw%?%{= kW}%n*%f %t%?%?%{= kw}%?%+Lw%?%?%= ][ %{r}%l%{w} ]%{w}[%{r} %d/%m/%y %c UTC %{w}]%{w}'
+

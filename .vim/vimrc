@@ -1,0 +1,24 @@
+set clipboard=unnamed
+call pathogen#infect()
+filetype on
+filetype off
+syntax on
+set tabstop=2 
+set softtabstop=2 
+set shiftwidth=2
+set modelines=2
+set expandtab
+set autoindent
+filetype plugin indent on
+:colorscheme elflord
+map <C-t> :NERDTreeToggle<CR>
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+set rtp+=/usr/local/opt/python/Frameworks/Python.framework/Versions/Current/lib/python2.7/site-packages/powerline/bindings/vim
+set laststatus=2 " Always display the statusline in all windows
+set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusline)"
+
+" Rainbow Parens
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
